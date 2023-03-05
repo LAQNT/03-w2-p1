@@ -1,0 +1,446 @@
+<!-- Crea una pagina responsive per mostrarci i tuoi album musicali preferiti.
+
+In questa pagina ci sarà una tua piccola biografia, i migliori album della tua vita, i peggiori che hai mai sentito, 
+e qualsiasi altra cosa relativa alla musica che ami.
+
+
+
+REGOLE:
+
+Il progetto dev'essere caricato in una nuova repository su GitHub e linkata al tuo Docente.
+Puoi usare Google / StackOverflow, MA ti suggeriamo caldamente di riferirti principalmente alla documentazione fornita, 
+per non perderti in ricerche infruttuose per troppo tempo.
+
+Prova il tuo lavoro su varie risoluzioni di schermo, ingrandendo e rimpicciolendo la finestra, 
+e soprattutto usando i developer tools del browser che forniscono l'emulatore di svariati device sul quale potrai vedere esattamente come si comporta il tuo layout.
+
+Usa le classi di Bootstrap4.6 per creare la griglia responsive quando necessario.
+Usa container > row > col in questo ordine per ottenere un layout responsive perfetto.
+
+NOTE:
+Non c'è una design preciso da seguire, dai sfogo alla tua creatività. L'unica cosa importante è che sia responsive!
+Fai qualche ricerca nel web per trarre ispirazione su come rappresentare un progetto musicale con svariate copertine di dischi.
+Può essere simile ad Amazon Music, Spotify, o Apple Music, o qualsiasi altra collezione di dischi là fuori nel world wide web.
+
+
+
+CONSIGLIO: Concentrati sulla struttura e la responsività prima, quando quella funziona puoi dedicarti alla parte grafica e di dettaglio.
+
+
+ESERCIZI:
+
+1) Andrai a creare un componente per rappresentare la carta del tuo album, che riutilizzerai in tutto il progetto. 
+Bootstrap ti dà disponibili alcuni componenti per card e immagini. 
+Puoi scegliere di partire da quelli e modificarli, oppure partire da zero e creare i tuoi componenti via CSS. Gli elementi necessari sono:  
+
+L'elemento Card
+L'immagine di copertina dell'album
+Il titolo dell'album
+Il gruppo / artista / dj dell'album
+Il genere dell'album
+La durata dell'album
+
+NB: Assicurati di applicare le stesse regole di stile a tutti i componenti album che userai nella pagina per mantenere la coerenza degli elementi e degli stili.
+
+
+
+2)  Implementa una navigation bar usando il componente boostrap apposito.
+
+     Questa navigazione dovrà linkare ogni sezione nella tua pagina.
+
+
+3) Crea una sezione responsive per i tuoi album preferiti.
+
+     In questa sezione dovrai avere:
+
+4 album per linea quando lo schermo è molto grande
+3 album per linea quando lo schermo ha una dimensione intermedia (tablet o simili)
+2 album per linea qunado lo schermo è molto piccolo (mobile)
+
+4) Crea una sezione per le recensioni degli album.
+
+      Prendi un album che ti piace molto e crea una sezione con:
+
+Una grande immagine di copertina
+Titolo
+Band
+Durata
+Genere
+Tracce dell'album ( in una tabella. Trovala tra i componenti Bootstrap ) 
+... e qualsiasi cosa ti venga in mente di interessante che lo riguardi!
+
+5) La lista dei peggiori album mai sentiti! Seleziona gli album che davvero non sopporti o qualcosa che pensi sia sopravvalutato e inseriscilo nella "hall of shame" in forma di tabella!
+
+
+6) Tutte copertine! Tappezza una sezione di copertine di album. Solo immagini in un layout a griglia senza spazi fra di loro, con le immagini alla stessa altezza. Inserisci almeno 20 immagini per avere un bell'effetto.
+
+
+EXTRA) Aggiungi un bottone ad ogni sezione, cliccandolo il corpo della sezione dovrà apparire (se nascosto) o nascondersi (se visibile).
+
+SUGGERIMENTO: vedi se esiste un componente Bootstrap che faccia al caso tuo. Se non dovessi trovarlo puoi sempre raggiungere lo stesso effetto usando la normale manipolazione del DOM 
+
+EXTRA) Aggiungi nel footer, al momento del caricamento della pagina, il numero di album presenti nella pagina.
+-->
+
+
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+     <meta charset="UTF-8">
+     <meta http-equiv="X-UA-Compatible" content="IE=edge">
+     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+     <link rel="stylesheet" href="./bootstrap/css/bootstrap.css">
+     <link rel="stylesheet" href="style.css">
+     <title>My Albums</title>
+</head>
+<body>
+
+<!-- ---NavBar--- -->
+<nav class="navbar navbar-expand-lg navbar-dark bg-dark">
+  <a class="navbar-brand" href="#">Spotify</a>
+    <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarnavaltmarkup" aria-controls="navbarnavaltmarkup" aria-expanded="true" aria-label="Toggle navigation">
+      <span class="navbar-toggler-icon"></span>
+    </button>
+    <div class="collapse navbar-collapse" id="navbarnavaltmarkup">
+      <div class="navbar-nav">
+        <a class="nav-item nav-link active" href="#">Albums<span class="sr-only">(current)</span></a>
+        <a class="nav-item nav-link" href="#">Playlists</a>
+        <a class="nav-item nav-link" href="#">Artists</a>
+        <a class="nav-item nav-link disabled" href="#">Settings</a>
+      </div>
+    </div>
+  </nav>
+
+  <!-- ---topDiv--- -->
+
+  <div class="intro">
+    <div class=" container">
+      <span>Let's discover your most listened albums</span>
+    </div>  
+  </div>
+
+  
+
+     <div class="container" >
+
+      <!-- ---gallery1--- -->
+      <div class="row gx-5 gy-4">
+        
+        <!-- ---card 1--- -->
+        <div class=" col-lg-3 col-md-4 col-sm-6 bg-color">
+          <div id="my-card-1">
+            
+            <div class="card ">
+
+              <img class="card-img-top" src="assets/jungle-album.jpg" alt="Card image cap">
+
+              <div class="card-body">
+                <h5 class="card-title">Jungle</h5>
+                <span class="artist">Jungle</span>
+
+              </div>
+              <ul class="list-group list-group-flush">
+
+                <!-- ---duration--- -->
+                <li class="list-group-item" ><i class="fa-regular fa-clock"></i>39:06</li>
+
+                <!-- ---genres--- -->
+                <li class="list-group-item"><i class="fa-solid fa-folder-tree"></i>Nu-disco, neo soul, funk.</li>
+
+                <!-- ---year--- -->
+                <li class="list-group-item"><i class="fa-regular fa-calendar-days"></i>2015</li>
+              </ul>
+            </div>
+
+          </div>
+        </div>
+
+        <!-- ---card 2--- -->
+        <div class="col-lg-3 col-md-4 col-sm-6 bg-color">
+          <div id="my-card-1">
+            
+            <div class="card">
+
+              <img class="card-img-top" src="assets/whateverPeopleSay-album.jpg" alt="Card image cap">
+
+              <div class="card-body">
+                <h5 class="card-title flex-nowrap">Whatever People Say I Am, That's What I'm Not</h5>
+                <span class="artist">Arctic Monkeys</span>
+
+              </div>
+              <ul class="list-group list-group-flush">
+
+                <!-- ---duration--- -->
+                <li class="list-group-item" ><i class="fa-regular fa-clock"></i>40:56</li>
+
+                <!-- ---genres--- -->
+                <li class="list-group-item"><i class="fa-solid fa-folder-tree"></i>Indie rock. garage rock revival, punk rock, alternative rock.</li>
+
+                <!-- ---year--- -->
+                <li class="list-group-item"><i class="fa-regular fa-calendar-days"></i>2006</li>
+              </ul>
+            </div>
+
+          </div>
+        </div>
+
+                <!-- ---card 3--- -->
+        <div class="col-lg-3 col-md-4 col-sm-6 bg-color">
+          <div id="my-card-1">
+            
+            <div class="card">
+
+              <img class="card-img-top" src="assets/elMalQuerer-album.jpg" alt="Card image cap">
+
+              <div class="card-body">
+                <h5 class="card-title">El Mal Querer</h5>
+                <span class="artist">Rosalia</span>
+
+              </div>
+              <ul class="list-group list-group-flush">
+
+                <!-- ---duration--- -->
+                <li class="list-group-item" ><i class="fa-regular fa-clock"></i>30:18</li>
+
+                <!-- ---genres--- -->
+                <li class="list-group-item"><i class="fa-solid fa-folder-tree"></i>Flamenco, pop, art pop.</li>
+
+                <!-- ---year--- -->
+                <li class="list-group-item"><i class="fa-regular fa-calendar-days"></i>2018</li>
+              </ul>
+            </div>
+
+          </div>
+        </div>
+
+
+                <!-- ---card 4--- -->
+        <div class="col-lg-3 col-md-4 col-sm-6 bg-color">
+          <div id="my-card-1">
+            
+            <div class="card">
+
+              <img class="card-img-top" src="assets/comforyMusicaParaVolar-album.jpg" alt="Card image cap">
+
+              <div class="card-body">
+                <h5 class="card-title">Comfort y Musica Para Volar</h5>
+                <span class="artist">Soda Stereo</span>
+
+              </div>
+
+              
+              <ul class="list-group list-group-flush">
+
+                <!-- ---duration--- -->
+                <li class="list-group-item" ><i class="fa-regular fa-clock"></i>51:45</li>
+
+                <!-- ---genres--- -->
+                <li class="list-group-item"><i class="fa-solid fa-folder-tree"></i>Alternative rock, psychelelic rock, pop rock.</li>
+
+                <!-- ---year--- -->
+                <li class="list-group-item"><i class="fa-regular fa-calendar-days"></i>1996</li>
+              </ul>
+            </div>
+
+          </div>
+        </div>
+
+      </div>
+     </div>
+
+
+<!-- -------------favAlbum----------- -->
+  <div class="row">
+    <span>Your favorite Album</span>
+  </div>
+  
+  <div class="container">
+
+      <div class="row bg-color">
+        <div id="my-card-fav">
+          
+          <div class="card">
+
+            <img class="card-img-top col" src="assets/lonerism-album.jpg" alt="Card image cap">
+
+            <div class="fav-card-info col-lg-3 col-md-4 col-sm-6 ">
+              <div class="card-body col">
+                <h5 class="card-title">Lonerism</h5>
+                <span class="artist">Tame Impala</span>
+  
+              </div>
+              <ul class="list-group list-group-flush col">
+  
+                <!-- ---duration--- -->
+                <li class="list-group-item" ><i class="fa-regular fa-clock"></i>39:06</li>
+  
+                <!-- ---genres--- -->
+                <li class="list-group-item"><i class="fa-solid fa-folder-tree"></i>Nu-disco, neo soul, funk.</li>
+  
+                <!-- ---year--- -->
+                <li class="list-group-item"><i class="fa-regular fa-calendar-days"></i>2015</li>
+                
+                <li class="list-group-item"><p>Lonerism is the second studio album by Australian musical project Tame Impala, released on 5 October 2012 by Modular Recordings. Like the band's debut studio album, Innerspeaker (2010), Lonerism was written, recorded, performed, and produced by Kevin Parker, with live member Jay Watson contributing on two tracks. Recorded mostly in Perth, Australia, and Paris.  </p></li>
+
+                <!-- ---tracks--- -->
+              </div>
+              <ol class="list-group list-group-numbered">
+                <div>
+                  <i class="fa-regular fa-circle-play"></i>
+                  <span>Tracks</span>
+                </div>
+                <li class="list-group-item">Be Above It</li>
+                <li class="list-group-item">Endors Toi</li>
+                <li class="list-group-item">Apocalypse Dreams</li>
+                <li class="list-group-item">Mind Mischief</li>
+                <li class="list-group-item">Music to Walk Home By</li>
+                <li class="list-group-item">Why Won't They Talk to Me?</li>
+                <li class="list-group-item">Feels Like We Only Go Backwards</li>
+                <li class="list-group-item">Keep on Lying</li>
+                <li class="list-group-item">Elephant</li>
+                <li class="list-group-item">She Just Won't Believe Me</li>
+                <li class="list-group-item">Nothing</li>
+                <li class="list-group-item">Sun's Coming Up</li>
+              </ol>
+            </div>
+           
+          </div>
+
+        </div>
+      </div>
+     </div>
+     
+     <!-- ------------------------------------ -->
+     
+     
+     
+     <!-- -------------worstAlbums----------- -->
+     
+     <div class="row">
+       <span>Overrated Albums</span>
+     </div>
+
+     <div class="container">
+
+    <div class="row">
+
+      <table class="table align-middle">
+        <thead>
+          <tr>
+            <th scope="col">Position</th>
+            <th scope="col"></th>
+            <th scope="col">Album Name</th>
+            <th scope="col">Artist</th>
+            <th scope="col">Year</th>
+          </tr>
+        </thead>
+        <tbody>
+          <tr>
+            <th scope="row">1</th>
+            <td><img src="assets/starboy-album.jpg"></td>
+            <td>Starboy</td>
+            <td>The Weekend</td>
+            <td>2016</td>
+          </tr>
+          <tr>
+            <th scope="row">2</th>
+            <td><img src="assets/V-album.jpg"></td>
+            <td>V</td>
+            <td>Maroon 5</td>
+            <td>2015</td>
+          </tr>
+          <tr>
+            <th scope="row">3</th>
+            <td><img src="assets/youngerNow-album.jpg"></td>
+            <td>Younger Now</td>
+            <td>Miley Cyrus</td>
+            <td>2018</td>
+          </tr>
+          <tr>
+            <th scope="row">3</th>
+            <td><img src="assets/musicofTheSpheres-album.jpg"></td>
+            <td>Music of the Spheres</td>
+            <td>Coldplay</td>
+            <td>2020</td>
+          </tr>
+        </tbody>
+      </table>
+    </div>  
+
+  </div>
+
+
+  <!-- ----------------carousel--------------- -->
+
+  <div class="container">
+    <div class="row">
+      <div class="col-4"></div>
+    
+      <div id="carouselExampleSlidesOnly" class="carousel slide col" data-bs-ride="carousel">
+        <div class="carousel-inner">
+          <div class="carousel-item active">
+            <img src="assets/jungle-album.jpg" class="d-block w-100" alt="...">
+          </div>
+          <div class="carousel-item">
+            <img src="assets/whateverPeopleSay-album.jpg" class="d-block w-100" alt="...">
+          </div>
+          <div class="carousel-item">
+            <img src="assets/elMalQuerer-album.jpg" class="d-block w-100" alt="...">
+          </div>
+          <div class="carousel-item">
+            <img src="assets/comforyMusicaParaVolar-album.jpg" class="d-block w-100" alt="...">
+          </div>
+          <div class="carousel-item">
+            <img src="assets/lonerism-album.jpg" class="d-block w-100" alt="...">
+          </div>
+          <div class="carousel-item">
+            <img src="assets/starboy-album.jpg" class="d-block w-100" alt="...">
+          </div>
+          <div class="carousel-item">
+            <img src="assets/V-album.jpg" class="d-block w-100" alt="...">
+          </div>
+          <div class="carousel-item">
+            <img src="assets/youngerNow-album.jpg" class="d-block w-100" alt="...">
+          </div>
+          <div class="carousel-item">
+            <img src="assets/musicofTheSpheres-album.jpg" class="d-block w-100" alt="...">
+          </div>
+          
+        
+        </div>
+      </div>
+      <div class="col-4"></div>
+
+    </div>
+
+  </div>
+
+
+
+
+
+
+
+
+
+
+
+      <footer>
+  
+        <span></span>
+    
+      </footer>
+
+
+      
+
+
+
+
+     <script src="./bootstrap/js/bootstrap.bundle.js"></script> 
+     <script src="script.js"></script> 
+     <script src="https://kit.fontawesome.com/b0f0399816.js" crossorigin="anonymous"></script>
+</body>
+</html>

@@ -1,0 +1,189 @@
+* {
+    font-family:Roboto;
+    color: rgb(220, 220, 220);
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+
+body {
+    background-color: rgb(0, 0, 0);
+}
+
+
+h2 {
+    color: aliceblue;
+    text-align: center;
+    font-size: 1rem;
+}
+
+.row > span {
+    font-weight: 400;
+    color:rgb(0, 234, 129);
+    font-size: 4rem;
+    text-align: center;
+    /* margin: auto; */
+}
+
+.intro span {
+    font-weight: 800;
+    font-size: 8rem;
+    color:rgb(126, 238, 107);
+    line-height: 10rem;
+}
+
+
+
+.container {
+    margin-top: 10rem;
+    height: 70rem;
+}
+
+
+/* ---backGround--- */
+.card {
+    background-color: rgb(0, 0, 0);
+}
+
+.list-gorup-flush {
+    background-color: rgb(40, 40, 40);
+}
+
+/* ---intro--- */
+.intro{
+    height: 800px;
+    background-color: rgb(0, 156, 86) ;
+    background-image: linear-gradient(rgb(0, 234, 129),  rgb(0, 0, 0));
+    padding: 3% 3%;
+}
+
+.intro p {
+    font-family: ;
+    font-size: 5rem;
+    font-weight: 600;
+    color: azure;
+    padding: ;
+    line-height: 80px;
+}
+
+
+
+/* ---albumTitle--- */
+.card-title {
+    font-size: 1.2rem;
+    font-style: italic;
+    font-weight: 800;
+    text-align: center;
+
+}
+
+.card-body:first-of-type {
+    text-align: justify;
+    height: 10rem;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-evenly;
+    padding: 5%;
+}
+
+.card-body span {
+    font-size: rem;
+    text-align: center;
+    font-weight: 500;
+    margin-bottom: 10px;
+    
+}
+
+
+/* ---description--- */
+.card-text {
+    font-size: .65rem;
+}
+
+
+.list-group-item {
+   background-color: transparent;
+   color: rgb(199, 204, 209);
+   border: 1px solid rgb(37, 37, 37);
+}
+
+/* ---listIcons--- */
+.list-group-flush i {
+    font-size: 1.2rem;
+    opacity: 70%;
+    margin: 0 10% 0 2%;
+}
+
+
+/* ---listFont--- */
+.list-group-item {
+    font-size: 1rem;
+}
+
+/* ---tracks-- */
+ol div {
+    font-size: 1.5rem;
+    padding: 1rem;
+}
+
+ol div span {
+    margin-left: 1rem;
+}
+
+
+/* ---table--- */
+
+.container:nth-of-type(2){
+    margin-top: 10rem;
+}
+
+.table img {
+    height: 5rem;
+    border-radius: 3%;
+}
+
+
+
+
+
+/* ---carousel--- */
+.carousel-inner {
+    border-radius: 2%;
+}
+
+.container:last-of-type{
+    height: 30rem;
+}
+
+
+/* ---footer--- */
+#my-card-fav .card{
+    display: flex;
+    flex-direction: row;
+    align-items: end;
+}
+
+
+.fav-card-info h5{
+    font-size: 3rem;
+}
+
+
+.fav-card-info span{
+    font-size: 2rem;
+}
+
+
+
+
+/* ---footer--- */
+footer {
+    /* height: 10px; */
+    text-align: center;
+}
+
+footer span {
+    font-size: 2rem;
+    color: rgb(0, 234, 129);
+}
+
