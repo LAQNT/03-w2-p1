@@ -99,42 +99,73 @@ EXTRA) Aggiungi nel footer, al momento del caricamento della pagina, il numero d
 
 <!-- ---NavBar--- -->
 <nav class="navbar navbar-expand-lg navbar-dark bg-dark">
-  <a class="navbar-brand" href="#">Spotify</a>
-    <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarnavaltmarkup" aria-controls="navbarnavaltmarkup" aria-expanded="true" aria-label="Toggle navigation">
-      <span class="navbar-toggler-icon"></span>
-    </button>
-    <div class="collapse navbar-collapse" id="navbarnavaltmarkup">
-      <div class="navbar-nav">
-        <a class="nav-item nav-link active" href="#">Albums<span class="sr-only">(current)</span></a>
-        <a class="nav-item nav-link" href="#">Playlists</a>
-        <a class="nav-item nav-link" href="#">Artists</a>
-        <a class="nav-item nav-link disabled" href="#">Settings</a>
+  <div class="container">
+
+      <i class="fa-brands fa-spotify"></i>
+      <a class="navbar-brand" href="#">Spotify</a>
+    
+      <button class=" navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarnavaltmarkup" aria-controls="navbarnavaltmarkup" aria-expanded="true" aria-label="Toggle navigation">
+        <span class="navbar-toggler-icon"></span>
+      </button>
+
+      <div class="collapse navbar-collapse" id="navbarnavaltmarkup">
+        <div class="navbar-nav">
+          <a class="nav-item nav-link active" href="#topAlbums">Top Albums<span class="sr-only">(current)</span></a>
+          <a class="nav-item nav-link" href="#">Favorite Album</a>
+          <a class="nav-item nav-link" href="#">Hall of Shame</a>
+          <a class="nav-item nav-link disabled" href="#">Your Artists</a>
+        </div>
       </div>
-    </div>
+
+  </div>
   </nav>
 
   <!-- ---topDiv--- -->
 
-  <div class="intro">
-    <div class=" container">
-      <span>Let's discover your most listened albums</span>
-    </div>  
+  <div class="animation">
+
+    <div class="container-fluid intro">
+      <div class="container">
+        <div class=" m-auto py-5 " >
+          <span>Let's discover your most listened albums</span>
+        </div>  
+      </div>
+    </div>
+    
   </div>
 
+  <!-- ---topAlbums------------------------------- -->
   
+  <div class="container p-0">
+    
+    <nav class="navbar navbar-dark bg-dark px-3">
+      <a class="navbar-brand text-subtitle" href="#">Top Albums</a>
+      
+        <button class="btn btn-dark" 
+        onclick="buttonText(this)"
+        data-bs-toggle="collapse" data-bs-target="#topAlbums" aria-expanded="true" aria-controls="#topAlbums">Show</button>
+        </button>
+    </nav>
 
-     <div class="container" >
+
+<section>
+
+  </div>
+
+     <div class="container p-0 my-5"  >
 
       <!-- ---gallery1--- -->
-      <div class="row gx-5 gy-4">
+      <div class="row gx-5 gy-5 collapse" id="topAlbums">
         
         <!-- ---card 1--- -->
         <div class=" col-lg-3 col-md-4 col-sm-6 bg-color">
-          <div id="my-card-1">
+          <div>
             
             <div class="card ">
 
-              <img class="card-img-top" src="assets/jungle-album.jpg" alt="Card image cap">
+              <div class="card-img">
+                <img class="card-img-top" src="assets/jungle-album.jpg" alt="Card image cap">
+              </div>
 
               <div class="card-body">
                 <h5 class="card-title">Jungle</h5>
@@ -163,7 +194,9 @@ EXTRA) Aggiungi nel footer, al momento del caricamento della pagina, il numero d
             
             <div class="card">
 
-              <img class="card-img-top" src="assets/whateverPeopleSay-album.jpg" alt="Card image cap">
+              <div class="card-img">
+                <img class="card-img-top" src="assets/whateverPeopleSay-album.jpg" alt="Card image cap">
+              </div>
 
               <div class="card-body">
                 <h5 class="card-title flex-nowrap">Whatever People Say I Am, That's What I'm Not</h5>
@@ -188,11 +221,13 @@ EXTRA) Aggiungi nel footer, al momento del caricamento della pagina, il numero d
 
                 <!-- ---card 3--- -->
         <div class="col-lg-3 col-md-4 col-sm-6 bg-color">
-          <div id="my-card-1">
+          <div>
             
             <div class="card">
-
-              <img class="card-img-top" src="assets/elMalQuerer-album.jpg" alt="Card image cap">
+             
+              <div class="card-img">
+                <img class="card-img-top" src="assets/elMalQuerer-album.jpg" alt="Card image cap">
+              </div>
 
               <div class="card-body">
                 <h5 class="card-title">El Mal Querer</h5>
@@ -218,15 +253,17 @@ EXTRA) Aggiungi nel footer, al momento del caricamento della pagina, il numero d
 
                 <!-- ---card 4--- -->
         <div class="col-lg-3 col-md-4 col-sm-6 bg-color">
-          <div id="my-card-1">
+          <div>
             
             <div class="card">
 
-              <img class="card-img-top" src="assets/comforyMusicaParaVolar-album.jpg" alt="Card image cap">
+              <div class="card-img">
+                <img class="card-img-top" src="assets/currents-album.jpg" alt="Card image cap">
+              </div>
 
               <div class="card-body">
-                <h5 class="card-title">Comfort y Musica Para Volar</h5>
-                <span class="artist">Soda Stereo</span>
+                <h5 class="card-title">Currents</h5>
+                <span class="artist">Tame Impala</span>
 
               </div>
 
@@ -247,135 +284,408 @@ EXTRA) Aggiungi nel footer, al momento del caricamento della pagina, il numero d
           </div>
         </div>
 
+        <!-- ---card 5--- -->
+        <div class="col-lg-3 col-md-4 col-sm-6 bg-color">
+          <div>
+            
+            <div class="card">
+
+              <div class="card-img">
+                <img class="card-img-top" src="assets/barMediterraneo-album.jpeg" alt="Card image cap">
+              </div>
+
+              <div class="card-body">
+                <h5 class="card-title">Bar Mediterraneo</h5>
+                <span class="artist">Nu Genea</span>
+
+              </div>
+
+              
+              <ul class="list-group list-group-flush">
+
+                <!-- ---duration--- -->
+                <li class="list-group-item" ><i class="fa-regular fa-clock"></i>35:01</li>
+
+                <!-- ---genres--- -->
+                <li class="list-group-item"><i class="fa-solid fa-folder-tree"></i>Disco.</li>
+
+                <!-- ---year--- -->
+                <li class="list-group-item"><i class="fa-regular fa-calendar-days"></i>2022</li>
+              </ul>
+            </div>
+
+          </div>
+        </div>
+
+
+        
       </div>
      </div>
+
+</section>
 
 
 <!-- -------------favAlbum----------- -->
-  <div class="row">
-    <span>Your favorite Album</span>
+
+<section>
+
+
+  <div class="container p-0">
+  
+      <nav class="navbar navbar-dark bg-dark px-3 ">
+        <a class="navbar-brand text-subtitle" href="#">Favorite Album</a>
+              
+        <button class="btn btn-dark" 
+        onclick="buttonText(this)"
+        data-bs-toggle="collapse" data-bs-target="#favAlbum" aria-expanded="true" aria-controls="#favAlbum">Show</button>
+        </button>
+      </nav>
+  
   </div>
   
-  <div class="container">
-
-      <div class="row bg-color">
-        <div id="my-card-fav">
+  <div class="container p-0 mt-4 mb-5" id="favAlbum">
+        <div class="row bg-color">
           
-          <div class="card">
-
-            <img class="card-img-top col" src="assets/lonerism-album.jpg" alt="Card image cap">
-
-            <div class="fav-card-info col-lg-3 col-md-4 col-sm-6 ">
-              <div class="card-body col">
-                <h5 class="card-title">Lonerism</h5>
-                <span class="artist">Tame Impala</span>
-  
-              </div>
-              <ul class="list-group list-group-flush col">
-  
-                <!-- ---duration--- -->
-                <li class="list-group-item" ><i class="fa-regular fa-clock"></i>39:06</li>
-  
-                <!-- ---genres--- -->
-                <li class="list-group-item"><i class="fa-solid fa-folder-tree"></i>Nu-disco, neo soul, funk.</li>
-  
-                <!-- ---year--- -->
-                <li class="list-group-item"><i class="fa-regular fa-calendar-days"></i>2015</li>
-                
-                <li class="list-group-item"><p>Lonerism is the second studio album by Australian musical project Tame Impala, released on 5 October 2012 by Modular Recordings. Like the band's debut studio album, Innerspeaker (2010), Lonerism was written, recorded, performed, and produced by Kevin Parker, with live member Jay Watson contributing on two tracks. Recorded mostly in Perth, Australia, and Paris.  </p></li>
-
-                <!-- ---tracks--- -->
-              </div>
-              <ol class="list-group list-group-numbered">
-                <div>
-                  <i class="fa-regular fa-circle-play"></i>
-                  <span>Tracks</span>
-                </div>
-                <li class="list-group-item">Be Above It</li>
-                <li class="list-group-item">Endors Toi</li>
-                <li class="list-group-item">Apocalypse Dreams</li>
-                <li class="list-group-item">Mind Mischief</li>
-                <li class="list-group-item">Music to Walk Home By</li>
-                <li class="list-group-item">Why Won't They Talk to Me?</li>
-                <li class="list-group-item">Feels Like We Only Go Backwards</li>
-                <li class="list-group-item">Keep on Lying</li>
-                <li class="list-group-item">Elephant</li>
-                <li class="list-group-item">She Just Won't Believe Me</li>
-                <li class="list-group-item">Nothing</li>
-                <li class="list-group-item">Sun's Coming Up</li>
-              </ol>
+            
+            <div class="card">
+              
+              <img class="col col-sm-12 col-md-12 col-lg-6 card-img-top" src="assets/lonerism-album.jpg" alt="Card image cap">
             </div>
-           
+  
+             
+              
+              <div class="col col-sm-12 col-md-6 col-lg-3 col-xlg-3">
+                <div class="card-body">
+                  <h5 class="card-title">Lonerism</h5>
+                  <span class="artist">Tame Impala</span>
+                </div>  
+                
+                
+                <ul class="list-group list-group-flush ">
+    
+                  <!-- ---duration--- -->
+                  <li class="list-group-item" ><i class="fa-regular fa-clock"></i>39:06</li>
+    
+                  <!-- ---genres--- -->
+                  <li class="list-group-item"><i class="fa-solid fa-folder-tree"></i>Nu-disco, neo soul, funk.</li>
+    
+                  <!-- ---year--- -->
+                  <li class="list-group-item"><i class="fa-regular fa-calendar-days"></i>2015</li>
+                  
+                  <li class="list-group-item"><p>Lonerism is the second studio album by Australian musical project Tame Impala, released on 5 October 2012 by Modular Recordings. Like the band's debut studio album, Innerspeaker (2010), Lonerism was written, recorded, performed, and produced by Kevin Parker, with live member Jay Watson contributing on two tracks. Recorded mostly in Perth, Australia, and Paris.  </p></li>
+                </ul>
+              </div>
+  
+              <!-- ---tracks--- -->
+              <div class="col col-sm-12 col-md-3">
+  
+                <ol class="list-group list-group-numbered >
+                
+                    <i class="fa-regular fa-circle-play"></i>
+                    <span>Tracks</span>
+                    <li class="list-group-item">Be Above It</li>
+                    <li class="list-group-item">Endors Toi</li>
+                    <li class="list-group-item">Apocalypse Dreams</li>
+                    <li class="list-group-item">Mind Mischief</li>
+                    <li class="list-group-item">Music to Walk Home By</li>
+                    <li class="list-group-item">Why Won't They Talk to Me?</li>
+                    <li class="list-group-item">Feels Like We Only Go Backwards</li>
+                    <li class="list-group-item">Keep on Lying</li>
+                    <li class="list-group-item">Elephant</li>
+                    <li class="list-group-item">She Just Won't Believe Me</li>
+                    <li class="list-group-item">Nothing</li>
+                    <li class="list-group-item">Sun's Coming Up</li>
+                  </ol>
+              </div>
+                </div>
+              </div>
+             
+            </div>
+  
           </div>
-
         </div>
-      </div>
-     </div>
+       </div>
+
+</section>
      
      <!-- ------------------------------------ -->
-     
-     
-     
-     <!-- -------------worstAlbums----------- -->
-     
-     <div class="row">
-       <span>Overrated Albums</span>
-     </div>
 
-     <div class="container">
+<!-- ---------playListTopSongs--------------------- -->
+<section>
 
-    <div class="row">
+  <div class="container p-0">
+  
+    <nav class="navbar navbar-dark bg-dark px-3 ">
+      <a class="navbar-brand text-subtitle " href="#">Top Songs</a>
+            
+      <button class="btn btn-dark" 
+      onclick="buttonText(this)"
+      data-bs-toggle="collapse" data-bs-target="#topSongs" aria-expanded="true" aria-controls="#topSongs">Show</button>
+      </button>
+    </nav>
 
-      <table class="table align-middle">
+  </div>
+
+  <!-- ----table---- -->
+
+  <div class="container mt-3 " id="topSongs">
+
+    <div class="row table-responsive-md">
+
+      <table class="table ">
         <thead>
           <tr>
             <th scope="col">Position</th>
-            <th scope="col"></th>
-            <th scope="col">Album Name</th>
+            <th scope="col">Title</th>
             <th scope="col">Artist</th>
-            <th scope="col">Year</th>
+            <th scope="col">Album</th>
+            <th scope="col">Duration</th>
+            <th scope="col"></th>
           </tr>
         </thead>
         <tbody>
           <tr>
             <th scope="row">1</th>
-            <td><img src="assets/starboy-album.jpg"></td>
-            <td>Starboy</td>
-            <td>The Weekend</td>
-            <td>2016</td>
+            <td>Árboles</td>
+            <td>Oh'laville</td>
+            <td>Aurora</td>
+            <td>3:47</td>
+            <td><button onclick= "deleteTableRow(this)"
+              type="button" id="btn-r-1" class="btn text-white btn-sm btn-danger btn-floating fs-5 py-0"> - </button></td>
           </tr>
           <tr>
             <th scope="row">2</th>
-            <td><img src="assets/V-album.jpg"></td>
-            <td>V</td>
-            <td>Maroon 5</td>
-            <td>2015</td>
+            <td>PROBLEMZ</td>
+            <td>Jungle</td>
+            <td>Good Times</td>
+            <td>3:03</td>
+            <td><button onclick= "deleteTableRow(this)" 
+            
+              type="button" class="btn text-white btn-sm btn-danger btn-floating fs-5 py-0"> - </button></td>
           </tr>
           <tr>
             <th scope="row">3</th>
-            <td><img src="assets/youngerNow-album.jpg"></td>
-            <td>Younger Now</td>
-            <td>Miley Cyrus</td>
-            <td>2018</td>
+            <td>Tienatè</td>
+            <td>Nu Genea</td>
+            <td>Bar Mediterraneo</td>
+            <td>4:48</td>
+            <td><button onclick= "deleteTableRow(this)" type="button" class="btn text-white btn-sm btn-danger btn-floating fs-5 py-0"> - </button></td>
           </tr>
           <tr>
-            <th scope="row">3</th>
-            <td><img src="assets/musicofTheSpheres-album.jpg"></td>
-            <td>Music of the Spheres</td>
-            <td>Coldplay</td>
-            <td>2020</td>
+            <th scope="row">4</th>
+            <td>Somethinggreater</td>
+            <td>Parcels</td>
+            <td>Day/Night</td>
+            <td>5:21</td>
+            <td><button onclick= "deleteTableRow(this)" type="button" class="btn text-white btn-sm btn-danger btn-floating fs-5 py-0"> - </button></td>
           </tr>
+          <tr>
+            <th scope="row">5</th>
+            <td>Algo Bello</td>
+            <td>Paco Moreno</td>
+            <td>Rumbitas</td>
+            <td>3:05</td>
+            <td><button onclick= "deleteTableRow(this)" type="button" class="btn text-white btn-sm btn-danger btn-floating fs-5 v"> - </button></td>
+          </tr>
+          <tr>
+            <th scope="row">6</th>
+            <td>La Torre</td>
+            <td>Gabriel Rios</td>
+            <td>Flore</td>
+            <td>3:54</td>
+            <td><button onclick= "deleteTableRow(this)" type="button" class="btn text-white btn-sm btn-danger btn-floating fs-5 py-0"> - </button></td>
+          </tr>
+          <tr>
+            <th scope="row">7</th>
+            <td>Mardy Bum</td>
+            <td>Arctic Monkeys</td>
+            <td>Suck It and See</td>
+            <td>4:17</td>
+            <td><button onclick= "deleteTableRow(this)" type="button" class="btn text-white btn-sm btn-danger btn-floating fs-5 py-0"> - </button></td>
+          </tr>
+          <tr>
+            <th scope="row">8</th>
+            <td>Stormy Weather</td>
+            <td>Kings of Leon</td>
+            <td>When You See Yourself</td>
+            <td>3:42</td>
+            <td><button onclick= "deleteTableRow(this)" type="button" class="btn text-white btn-sm btn-danger btn-floating fs-5 py-0"> - </button></td>
+          </tr>
+          <tr>
+            <th scope="row">9</th>
+            <td>Los Tontos</td>
+            <td>C. Tangana</td>
+            <td>El Madrileño</td>
+            <td>3:12</td>
+            <td><button onclick= "deleteTableRow(this)" type="button" class="btn text-white btn-sm btn-danger btn-floating fs-5 py-0"> - </button></td>
+          </tr>
+          <tr>
+            <th scope="row">10</th>
+            <td>B-Side</td>
+            <td>Khruangbin</td>
+            <td>2022</td>
+            <td>4:34</td>
+            <td><button onclick= "deleteTableRow(this)" type="button" class="btn text-white btn-sm btn-danger btn-floating fs-5 "> - </button></td>
+          </tr>
+  
         </tbody>
       </table>
-    </div>  
+
+      <div class="row">
+         <button 
+         type="button" 
+         class="col-1-lg col-sm-2 fs-5 btn btn-success mb-4 mt-2 mx-auto"
+         data-bs-toggle="modal"
+         data-bs-target="#addSongModal">+
+        </button>
+       </div>
+
+       <div class="modal fade col-6" id="addSongModal" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
+        <div class="modal-dialog ">
+          <div class="modal-content ">
+            <div class="modal-header ">
+              <h5 class="modal-title" id="exampleModalLabel ">Add Song</h5>
+            
+            </div>
+            <div class="modal-body">
+
+              <!-- ---inputs--- -->
+              <div class="input-group mb-3">
+
+                <button class="btn btn-dark dropdown-toggle" type="button" data-bs-toggle="dropdown" aria-expanded="false">Position</button>
+                <ul class="dropdown-menu">
+                  <li><a class="dropdown-item" >1</a></li>
+                  <li><a class="dropdown-item" >2</a></li>
+                  <li><a class="dropdown-item" >3</a></li>
+                  <li><a class="dropdown-item" >4</a></li>
+                  <li><a class="dropdown-item" >5</a></li>
+                  <li><a class="dropdown-item" >6</a></li>
+                  <li><a class="dropdown-item" >7</a></li>
+                  <li><a class="dropdown-item" >8</a></li>
+                  <li><a class="dropdown-item" >9</a></li>
+                  <li><a class="dropdown-item" >10</a></li>
+                </ul>
+                <input type="text" class="form-control" aria-label="Text input with dropdown button">
+                
+                <span class="input-group-text" id="inputGroup-sizing-default">Title</span>
+                <input type="text" class="form-control" aria-label="Sizing example input" aria-describedby="inputGroup-sizing-default">
+                
+                <span class="input-group-text" id="inputGroup-sizing-default">Artist</span>
+                <input type="text" class="form-control" aria-label="Sizing example input" aria-describedby="inputGroup-sizing-default">
+                
+                <span class="input-group-text" id="inputGroup-sizing-default">Duration</span>
+                <input type="text" class="form-control" aria-label="Sizing example input" aria-describedby="inputGroup-sizing-default">
+
+
+              </div>
+
+
+            </div>
+            <div class="modal-footer">
+              <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Discard</button>
+              <button type="button" class="btn btn-success">Add Song</button>
+            </div>
+          </div>
+        </div>
+      </div>
+
+    </div>
+
+
+
 
   </div>
 
 
-  <!-- ----------------carousel--------------- -->
 
-  <div class="container">
-    <div class="row">
+
+</section>
+     
+     
+     
+     <!-- -------------hallOfShame----------- -->
+<section>
+
+  <div class="container p-0">
+
+   <nav class="navbar navbar-dark bg-dark mt-5 px-3">
+     <a class="navbar-brand text-subtitle" href="#">Hall of Shame</a>
+           
+     <button class="btn btn-dark" 
+     onclick="buttonText(this)"
+     data-bs-toggle="collapse" data-bs-target="#hallOfShame" aria-expanded="true" aria-controls="#hallOfShame">Show</button>
+     </button>
+   </nav>
+
+ </div>
+
+  <div class="container mt-3">
+
+   <div class="row" id="hallOfShame">
+     <table class="table">
+       <thead>
+         <tr>
+           <th scope="col">Position</th>
+           <th scope="col"></th>
+           <th scope="col">Album Name</th>
+           <th scope="col">Artist</th>
+           <th scope="col">Year</th>
+         </tr>
+       </thead>
+       <tbody>
+         <tr>
+           <th scope="row">1</th>
+           <td><img src="assets/starboy-album.jpg"></td>
+           <td>Starboy</td>
+           <td>The Weekend</td>
+           <td>2016</td>
+         </tr>
+         <tr>
+           <th scope="row">2</th>
+           <td><img src="assets/V-album.jpg"></td>
+           <td>V</td>
+           <td>Maroon 5</td>
+           <td>2015</td>
+         </tr>
+         <tr>
+           <th scope="row">3</th>
+           <td><img src="assets/youngerNow-album.jpg"></td>
+           <td>Younger Now</td>
+           <td>Miley Cyrus</td>
+           <td>2018</td>
+         </tr>
+         <tr>
+           <th scope="row">4</th>
+           <td><img src="assets/musicofTheSpheres-album.jpg"></td>
+           <td>Music of the Spheres</td>
+           <td>Coldplay</td>
+           <td>2020</td>
+         </tr>
+       </tbody>
+     </table>
+   </div>  
+  </div>
+</section>
+
+
+  <!-- ----------------carousel--------------- -->
+  
+<section class="section-toggle ">
+
+  <div class="container p-0 ">
+
+    <nav class="navbar navbar-dark bg-dark my-5 px-3">
+      <a class="navbar-brand text-subtitle" href="#">Albums Collection</a>
+            
+      <button class="btn btn-dark" 
+      onclick="buttonText(this)"
+      data-bs-toggle="collapse" data-bs-target="#carousel" aria-expanded="true" aria-controls="#carousel">Show</button>
+      </button>
+    </nav>
+
+  </div>
+  <div class="container mt-0">
+    <div class="row" id="carousel">
       <div class="col-4"></div>
     
       <div id="carouselExampleSlidesOnly" class="carousel slide col" data-bs-ride="carousel">
@@ -416,6 +726,7 @@ EXTRA) Aggiungi nel footer, al momento del caricamento della pagina, il numero d
     </div>
 
   </div>
+</section>
 
 
 

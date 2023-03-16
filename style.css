@@ -17,12 +17,15 @@ h2 {
     font-size: 1rem;
 }
 
+
+
+
 .row > span {
     font-weight: 400;
     color:rgb(0, 234, 129);
     font-size: 4rem;
     text-align: center;
-    /* margin: auto; */
+
 }
 
 .intro span {
@@ -32,29 +35,51 @@ h2 {
     line-height: 10rem;
 }
 
+.fa-spotify {
+    font-size: 1.7rem;
+    margin-right: 1rem;
+}
 
 
-.container {
-    margin-top: 10rem;
-    height: 70rem;
+/* -----navBars------ */
+.text-subtitle {
+    font-size: 2.5rem;
+    font-weight: 400;
+    color:rgb(188, 244, 178);
+}
+
+nav {
+    border-radius: .3rem;
 }
 
 
 /* ---backGround--- */
 .card {
     background-color: rgb(0, 0, 0);
+    width: auto;
 }
+
 
 .list-gorup-flush {
     background-color: rgb(40, 40, 40);
 }
 
-/* ---intro--- */
+/* ---jumbotron--- */
+.animation{
+    animation-name: jumbotronAnimation;
+    animation-duration: 3s;
+    z-index:2;
+}
+
+
 .intro{
-    height: 800px;
+    /* height: 800px; */
     background-color: rgb(0, 156, 86) ;
     background-image: linear-gradient(rgb(0, 234, 129),  rgb(0, 0, 0));
     padding: 3% 3%;
+    z-index: 1;
+
+
 }
 
 .intro p {
@@ -64,9 +89,26 @@ h2 {
     color: azure;
     padding: ;
     line-height: 80px;
+
 }
 
 
+
+/* ----------albumCards---------- */
+
+.card-img-top {
+    position: relative;
+}
+.card-img span {
+    position: absolute;
+    right: .7rem;
+    top: .7rem;
+    background-color: rgb(31, 77, 29);
+    color: aliceblue;
+    opacity: 90%;
+    border-radius: 7%;
+    padding: 0 .5rem 0 .5rem;
+}
 
 /* ---albumTitle--- */
 .card-title {
@@ -131,11 +173,23 @@ ol div span {
 }
 
 
-/* ---table--- */
-
-.container:nth-of-type(2){
-    margin-top: 10rem;
+/* ---topSongs--- */
+#topSongs .btn-success:hover {
+    box-shadow: .05rem 1rem .2rem rgb(54, 57, 54);
+    background-color:rgb(121, 159, 114);
 }
+
+#topSongs .td {
+ white-space: nowrap;
+ overflow: hidden;
+ text-overflow: ellipsis;   
+}
+
+.modal-content {
+    background-color: rgb(71, 71, 71);
+} 
+
+/* ---hallOfShame--- */
 
 .table img {
     height: 5rem;
@@ -146,14 +200,13 @@ ol div span {
 
 
 
+
 /* ---carousel--- */
 .carousel-inner {
     border-radius: 2%;
 }
 
-.container:last-of-type{
-    height: 30rem;
-}
+
 
 
 /* ---footer--- */
@@ -178,12 +231,38 @@ ol div span {
 
 /* ---footer--- */
 footer {
-    /* height: 10px; */
     text-align: center;
+    margin-top: 5rem;
+
 }
 
 footer span {
     font-size: 2rem;
-    color: rgb(0, 234, 129);
+    color:rgb(188, 244, 178);
 }
 
+/* --------------- */
+
+@keyframes jumbotronAnimation {
+    0%   {background-color:red; left:0px; top:0px;}
+    25%  {background-color:yellow; left:200px; top:0px;}
+    50%  {background-color:blue; left:200px; top:200px;}
+    75%  {background-color:green; left:0px; top:200px;}
+    100% {background-color:rgb(0, 234, 129); left:0px; top:0px;}
+  
+}
+
+
+/* -------buttonRed----- */
+
+td button {
+    visibility: hidden;
+}
+
+tr:hover {
+    background: rgb(32, 32, 32);
+   
+}
+tr:hover td button {
+    visibility: visible;
+}
